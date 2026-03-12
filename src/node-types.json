@@ -275,9 +275,13 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "anotation_statement",
+          "named": true
+        },
         {
           "type": "statement_block",
           "named": true
@@ -354,9 +358,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "anotation_statement",
+          "named": true
+        },
         {
           "type": "call_expression",
           "named": true
