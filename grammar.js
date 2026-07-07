@@ -231,7 +231,11 @@ module.exports = grammar({
         $.call_expression,
       ),
 
-    _constructable_expression: ($) => choice($.literal_type, $.identifier),
+    _constructable_expression: ($) =>
+      choice($.literal_type, $.identifier, $.array_value),
+
+    array_value: ($) =>
+      seq("[", commaSep(optional($._constructable_expression)), "]"),
 
     namespace_identifier: (_) => {
       const alpha =
